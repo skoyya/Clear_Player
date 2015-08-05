@@ -83,8 +83,12 @@ var Player =
 						Player._sourceBuffer.appendBuffer(buf);
 				else
 						Player._sourceBuffer.append(buf);
+
+				console.log("["+Player._segSeq+"] downloaded and appended successfully");
+
 			});
 			xhr.send();	
+			console.log("xhr sent :"+segURL);
 			}
 			catch(e)
 			{ console.log("Error loading the segment "+e.message);}
